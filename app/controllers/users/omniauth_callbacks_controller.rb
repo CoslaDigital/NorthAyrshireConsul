@@ -1,4 +1,6 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  skip_before_action :verify_authenticity_token
+
   def twitter
     sign_in_with :twitter_login, :twitter
   end
@@ -48,6 +50,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     def save_user
+      @user.skip_confirmation!
       @user.save || @user.save_requiring_finish_signup
     end
 end
