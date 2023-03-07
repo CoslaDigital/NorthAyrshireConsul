@@ -10,11 +10,8 @@
       signup_link: link_to(t("devise_views.shared.links.signup_link"), new_user_registration_path))) %>
 </p>
 
-<div id="admin_login" style= "visibility:hidden">
 
-<h2>Administrator Login</h2>
-
-<p>This login is for administrators only. Users must use myaccount to login using the link at the top of this page.</p>
+<h2>Email Login Process</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="row">
@@ -41,13 +38,3 @@
 
 <%= render "devise/shared/links" %>
 
-</div>
-
-<button onclick="displayAdminLogin()">Consul Officer</button>
-
-<script>
-function displayAdminLogin() {
-    const div = document.getElementById("admin_login");
-    div.style.visibility = div.style.visibility == "hidden" ? "visible" : "hidden";
-}
-</script>
