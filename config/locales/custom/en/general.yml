@@ -86,7 +86,7 @@ en:
       tags_instructions: Tag this debate.
       tags_placeholder: "Enter the tags you would like to use, separated by commas (',')"
     index:
-      featured_debates: Featured
+      featured_debates: featured_debates
       orders:
         confidence_score: highest rated
         created_at: newest
@@ -334,7 +334,7 @@ en:
       map_location_instructions: "Navigate the map to the location and place the marker."
       map_remove_marker: "Remove map marker"
     index:
-      featured_proposals: Featured
+      featured_proposals: featured_proposals
       orders:
         confidence_score: highest rated
         created_at: newest
